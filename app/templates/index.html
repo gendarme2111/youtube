@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div>
+	<form action="/result" method="post">
+	検索したい動画タイトル: <input type="text" name="key" size="20">
+	<input type="submit" value="検索">
+	<select name="category">
+		<option value="viewCount">再生数</option>
+		<option value="rating">評価</option>
+		<option value="date">投稿日時</option>
+	</select>
+	<select name="maxNumber">
+		<option value="5">5件</option>
+		<option value="10">10件</option>
+		<option value="20">20件</option>
+	</select>
+	</form>
+	</div>
+</body></html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+	<body>
+	<h2>検索結果</h2>
+	<hr>
+	{% set i = array|length /4%}
+	{% set ns = namespace(p = 0) %}
+   	{%for j in range(i|int)%}
+   	<iframe width="240" height="135"
+	src="{{array[3+ns.p]}}"
+	frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+	</iframe>
+ 	[タイトル]{{array[0+ns.p]}}[投稿者]{{array[1+ns.p]}}[投稿日]{{array[2+ns.p]}}<br>
+ 	{%set ns.p = ns.p + 4%}
+ 	<hr>
+ 	{%endfor%}
+    </body>
+</html>
